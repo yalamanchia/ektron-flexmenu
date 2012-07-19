@@ -1,0 +1,269 @@
+/*                                                                          */
+/* NOTICE:                                                                  */
+/*    To support more than one-single FlexMenu server control per page      */
+/*    the CSS files' name is used as a class and is prefixed to all of      */
+/*    the selectors (without the path or extension).                        */
+/*                                                                          */
+/*    The server control will automatically wrap the entire FlexMenu        */
+/*    within a div-tag, whose class-name will be derived from the filename. */
+/*                                                                          */
+/*    *** THESE MUST BE ENTIRELY IN LOWER CASE! ***                         */
+/*    The server control will cast these filenames to lower before use!     */
+/*                                                                          */
+/*    Only the base ASCII character set is supported.                       */
+/*                                                                          */
+/*    Also, spaces and periods before the extension will be converted       */
+/*    into underscores, as these are not permitted within the selector.     */
+/*                                                                          */
+
+.vertical .ekflexmenu 
+{
+	/* DIV; wraps the entire menu */
+	/* (the outer-most non-user container element) */
+    color: rgb(255, 255, 255);
+    width: 148px; /* can be overridden in the primary div-containers (whose class = ekflexmenu) style */
+    font-size: 97%;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    /*background: #035392;*/
+    /*border-right: solid 1px rgb(71, 71, 71);*/
+    /*border-bottom: solid 1px rgb(71, 71, 71);*/
+}
+
+.vertical .ekflexmenu_submenu,
+.vertical .ekflexmenu_submenu_hover,
+.vertical .ekflexmenu_submenu_parent,
+.vertical .ekflexmenu_submenu_parent_hover
+{
+	/* DIV; holds submenu items, such as a submenu title and links. */
+	position: relative;
+	top: 0px;
+	left: 0px;	     
+}
+
+.vertical UL 
+{
+	/* UL; a container for menu list items (useful for non-graphical browsers). */
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.vertical LI
+{
+	/* LI; container for menu items (typically either links or sub-menus). */
+	display:inline;
+	margin: 0px;
+	padding: 0px;
+}
+
+.vertical .ekflexmenu_submenu_items {
+	/* DIV; container for menu lists. */
+    overflow: hidden; /* truncate what cannot fit */
+    /*border-bottom: solid 2px rgb(71, 71, 71);*/
+    text-align: left;    
+    line-height: 1.2em;    
+}
+
+.vertical .ekflexmenu_submenu_items_hidden 
+{
+	/* DIV; normally hidden container for menu lists (becomes visible if */
+	/* user clicks on related submenu button, or if Javascript/CSS not supported). */
+	display: none;
+}
+
+/* Nested menu items */
+.vertical .ekflexmenu_submenu_items .ekflexmenu_submenu_items, 
+.vertical .ekflexmenu_submenu_items .ekflexmenu_submenu_items_hidden, 
+.vertical .ekflexmenu_submenu_items_hidden .ekflexmenu_submenu_items_hidden
+{
+	/* Rule is applied to nested submenus. Hidden included in-case */
+	/* Javascript is not supported and hidden submenus are made visible. */
+	margin-left: 2px; /* indents menu items, accumulating with each nesting level */
+    border-bottom-width: 0px; /* prevents bottom border from accumulating, with each level of nesting */
+}
+
+/* Button menu items, controls visibility of associated sub-menus */
+.vertical .ekflexmenu_button
+{   
+    display: block;
+    padding: 5px 5px 5px 8px;
+    font-weight: 500;
+    color: #333;
+    background: #ffeeb5;
+    text-align:left;
+    width: 100%;    
+    text-decoration:none;    
+}
+.vertical .ekflexmenu_button:toggle,
+.vertical .ekflexmenu_button_toggle  {
+
+        float:left;
+        margin:0 3px;        
+        text-indent:-5000px;
+        padding:0 5px 0 0;
+        cursor:pointer;
+        border:none;
+        text-align: left;
+		background:transparent url(../img/subNav_topLevel_toggle.png) no-repeat center 11px;
+}
+
+.vertical .ekflexmenu_button:focus,
+.vertical .ekflexmenu_button:hover,
+.vertical .ekflexmenu_button_hover
+{
+    display: block;
+    padding: 5px 5px 5px 8px;
+    font-weight: 500;
+    color: white;
+    background: #A4001E;
+    text-align: left;
+    width: 100%;
+    border-bottom: solid 1px white;
+    text-decoration:none;
+    line-height: 1.2em;
+}
+
+.vertical .ekflexmenu_button_selected
+{
+	display: block;
+    padding: 5px 5px 5px 8px;
+    font-weight: 500;
+    color: #333333;
+    background: #FFEEB5;
+    text-align: left;
+    width: 100%;
+    border-bottom: solid 1px white;
+    text-decoration:none;	
+}
+.vertical .ekflexmenu_button_selected_hover
+{
+	display: block;
+    padding: 5px 5px 5px 8px;
+    font-weight: 500;
+    color: white;
+    background: #A4001E;
+    text-align: left;
+    width: 100%;
+    border-bottom: solid 1px white;
+    text-decoration:none;
+}
+
+/* images */
+.vertical .ekflexmenu_submenu_items a img, 
+.vertical .ekflexmenu_submenu_items_hidden a img {
+	/* IMG; menu-item image, selected by CMS, can be used */
+	/* with or in place of the textual title of the link. */
+	border-width: 0px;
+}
+
+/* Link menu items */
+.vertical a.ekflexmenu_link, 
+.vertical a.ekflexmenu_link:link, 
+.vertical a.ekflexmenu_link:visited {
+	/* A; link for individual menu items (CMS quicklink, external link, etc.). */
+    padding: 0px 0px 0px 0px;
+    text-indent: 10px;
+    color: #333333;
+    background: #FFEEB5;
+    text-decoration: none;
+    display: block; /* force one link per row */
+    width: 100%; /* fill entire row with link */
+    /* border-bottom: solid 2px rgb(238, 238, 238); */
+    text-align: left;    
+   
+}
+/*.ekflexmenu_submenu_items a:hover */
+.vertical a.ekflexmenu_link:hover, 
+.vertical a.ekflexmenu_link:active, 
+.vertical a.ekflexmenu_link:focus  {
+	/* A; hovered version of ekflexmenu_link, see above... */
+    padding: 4px 5px 4px 24px;
+    text-indent: 10px;
+    color:  #333333;
+    background : #FFFAE9;
+    text-decoration: none;
+    border: none;    
+    display: block; 
+	width: 100%;
+    text-align: left;
+    /* border-bottom: solid 2px #f6a017;*/
+}
+
+.vertical a.ekflexmenu_link_selected {
+	/* A; selected version of ekflexmenu_link, see above... */
+    padding: 0px 0px 0px 0px;
+    text-indent: 10px;
+	color:  #333333;
+    background: rgb(238, 238, 238);
+    border-color : rgb(206, 190, 140);
+	display: block; 
+	width: 100%;
+    border-bottom: solid 2px #f6a017;
+    text-align: left;
+}
+.vertical a.ekflexmenu_link_selected:hover {
+	/* A; selected and hovered version of ekflexmenu_link, see above... */
+    padding: 0px 0px 0px 0px;
+    text-indent: 10px;
+	color: #333333;
+    background: rgb(238, 238, 238);
+    border-color : rgb(161, 141, 112);
+	display: block; 
+	width: 100%;
+    border-bottom: solid 2px #f6a017;
+    text-align: left;
+}
+
+.vertical .ekflexmenu_menu_level_2 .ekflexmenu_button
+{
+    padding: 0px 0px;
+    text-indent: 10px;
+    color: #333333;
+    background: #A4001E;
+    text-decoration: none;
+    display: block;
+    width: 97%;    
+    text-align: left;
+    white-space: normal;
+    border-right: solid 4px #d4d2d0;
+}
+
+.vertical .ekflexmenu_menu_level_2 .ekflexmenu_button_selected_hover
+{
+	padding: 0px 0px;
+    text-indent: 10px;
+	color: white;
+    background: #A4001E;
+    border-color : rgb(161, 141, 112);
+	display: block; 
+	width: 97%;    
+    text-align: left;
+    white-space: normal;
+    border-right: solid 4px #f6a017;
+}
+.vertical .ekflexmenu_menu_level_2 .ekflexmenu_button_selected
+{
+	padding: 0px 0px;
+    text-indent: 10px;
+	color: white;
+    background: #A4001E;
+    border-color : rgb(161, 141, 112);
+	display: block; 
+	width: 97%;    
+    text-align: left;
+    white-space: normal;
+    border-right: solid 4px #f6a017;
+}
+.vertical .ekflexmenu_menu_level_2 .ekflexmenu_button_hover
+{
+	padding: 0px 0px;
+    text-indent: 10px;
+	color: white;
+    background: #A4001E;
+    border-color : rgb(161, 141, 112);
+	display: block; 
+	width: 97%;    
+    text-align: left;
+    white-space: normal;
+    border-right: solid 4px #f6a017;
+}

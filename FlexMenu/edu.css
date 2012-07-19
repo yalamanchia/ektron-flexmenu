@@ -1,0 +1,824 @@
+/* -------------------------------------------------------------- 
+   reset.css
+   * Resets default browser CSS.
+-------------------------------------------------------------- */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;padding: 0;border: 0;font-weight: inherit;font-style: inherit;font-size: 100%;font-family: inherit;
+}
+body { line-height: 1.5 }
+
+/* Tables still need 'cellspacing="0"' in the markup. */
+table { border-collapse: collapse; border-spacing: 0; } 
+/* caption, th, td { text-align: left; font-weight: normal; } */
+/* table, td, th { vertical-align: middle; }*/
+
+/* Remove possible quote marks (") from <q>, <blockquote>. */
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+
+/* Remove annoying border on linked images. */
+a img { border: none; }
+
+/* -------------------------------------------------------------- 
+   typography.css
+   * Sets up some sensible default typography.
+-------------------------------------------------------------- */
+
+/* Default font settings. 
+   The font-size percentage is of 16px. (0.75 * 16px = 12px) */
+body { 
+  font-size: 75%;
+  color: #222; 
+  background: #fff;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+/* Headings
+-------------------------------------------------------------- */
+h1,h2,h3,h4,h5,h6 { font-family: Arial, Helvetica, sans-serif; font-weight: normal; color: #111; }
+
+h1 { font-size: 2em; line-height: 1; margin-bottom: 0.5em; color:#a4001e}
+h2 { font-size: 1.6em; line-height: 1.1; margin-bottom: 0.75em; color:#222}
+h3 { font-size: 1.4em; line-height: 1; margin-bottom: 1em; padding-top:8px; }
+h4 { font-size: 1.1em; line-height: 1.25; margin-bottom: 1.25em; }
+h5 { font-size: 1em; font-weight: bold; margin-bottom: 1.5em; }
+h6 { font-size: 1em; font-weight: bold; }
+
+h1 img, h2 img, h3 img, 
+h4 img, h5 img, h6 img {
+  margin: 0;
+}
+h3 img {margin:0 5px}
+
+/* Text elements
+-------------------------------------------------------------- */
+p           { margin: 0 0 1.5em; font-family: Verdana, Helvetica, sans-serif;}
+/* p img.left  { float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; } --- will implement for Phase 3--*/
+/* p img.right { float: right; margin: 1.5em 0 1.5em 1.5em; } */
+
+a           { color: #900; text-decoration: underline; }
+a:focus, 
+a:hover     { color: #f00; text-decoration:none}
+
+/* blockquote  { margin: 1.5em; color: #666; font-style: italic; } */
+blockquote  { margin: 1.5em; }
+strong      { font-weight: bold; }
+em,dfn      { font-style: italic; }
+dfn         { font-weight: bold; }
+sup, sub    { line-height: 0; }
+
+abbr, 
+acronym     { border-bottom: 1px dotted #666; }
+address     { margin: 0 0 1.5em; font-style: italic; }
+del         { color:#666; }
+
+pre 				{ margin: 1.5em 0; white-space: pre; }
+pre,code,tt { font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5; }
+
+
+/* Lists
+-------------------------------------------------------------- */
+li ul, 
+li ol       { margin:0 1.5em; }
+ul, ol      { margin: 0 1.5em 1.5em 1.5em; }
+li          { margin:2px 0; }
+
+ul          { list-style-type: square }
+ol          { list-style-type: decimal; margin-left:2.5em}
+
+dl          { margin: 0 0 1.5em 0; }
+dl dt       { font-weight: bold; }
+dd          { margin-left: 1.5em;}
+
+
+/* Tables
+-------------------------------------------------------------- */
+/* table       { margin-bottom: 1.4em; width:100%; } */
+table       { margin-bottom: 1.4em; } 
+th          { font-weight: bold; } 
+thead th 		{ background: #c3d9ff; } 
+/*th,td,caption { padding: 4px 10px 4px 5px; }*/
+th,td,caption {  padding: 3px 5px 3px 5px;  }
+td          { border: 1px solid #ccc; }
+	#abroad td { border:none; }
+tr.even td  { background: #e5ecf9; }
+tfoot       { font-style: italic; }
+caption     { background: #eee; }
+
+
+/* -------------------------------------------------------------- */
+
+body {
+  background:#ddd url(../img/body-bg.png) repeat-x fixed;
+}
+  .container {
+    width:960px;
+    margin:0 auto;
+  }
+  
+/* - - - - - HEADER - - - - - - -*/
+#header-container {
+  background:url(../img/header-contiainer-bg.png) repeat-x;
+  height:116px;
+}
+#header {
+ position:relative;
+ background:url(../img/header-bg.png) no-repeat top right;
+ float:left;
+ width:960px;
+}
+	#header h1 { margin:0; }
+  #header h1 a {
+    height:52px;
+    width:234px;
+    display:block;
+    text-indent:-9999px;
+    background:url(../img/arcadia-logo.png) no-repeat;
+    margin:20px 0 15px 20px;
+  }
+  a#cgs-logotype {
+  	background: transparent url(../img/cgs-white.png) no-repeat;
+  	width:400px;
+  	height:24px;
+  	display:block;
+  	text-indent:-9999px;
+  	position:absolute;
+  	right:0;
+  	top:51px;
+  }
+  
+  #header #eyebrow {
+    float:right;
+    position:absolute;
+    top:0;
+    right:0;
+  }
+    #header #eyebrow ul {
+      float:right;
+      margin:0;
+    }
+      #header #eyebrow ul li {
+        font-size: 90%;
+				float:left;
+        list-style:none;
+        padding:3px 2px;
+      }
+        #eyebrow a {
+          display:block;
+          color:#fff;
+          padding:3px 8px;
+          text-decoration:none;
+          /*border-right:1px solid #a00;*/
+        }
+          #eyebrow a:hover {
+            text-decoration:underline;
+          }
+        li#google input[type="text"]	 { width:150px;margin-top:2px}
+        #eyebrow label {
+          color:#fff;
+          padding:3px 5px;
+        }
+    #printLogo { display:none;}    
+
+/* - - - - -#mainNav - - - - - - -*/ 
+#mainNav {
+  background:url(../img/mainNav-bg.png) no-repeat center;
+  height:29px;
+  margin:-4px -4px 0 -4px;
+  padding:4px 4px 0;
+  width:960px;
+  position:static;
+}
+  #mainNav ul {
+    margin:0;
+  }
+    #mainNav ul li {
+      float:left;
+      list-style:none;
+    }
+      #mainNav ul li a {
+        display:block;
+        height:25px;
+        background:url(../img/mainNav.png) no-repeat 0 0;
+        text-indent:-9999px;
+      }
+      #mainNav ul li a#nav_about { background-position:0px 0px; width:120px }
+      #mainNav ul li a#nav_admissions { background-position:-120px 0px ; width:120px }
+      #mainNav ul li a#nav_academic { background-position:-240px 0px; width:120px }
+      #mainNav ul li a#nav_abroad { background-position:-360px 0px; width:120px }
+      #mainNav ul li a#nav_student { background-position:-480px 0px; width:120px }
+      #mainNav ul li a#nav_athletics { background-position:-600px 0px; width:113px }
+      #mainNav ul li a#nav_givingback { background-position:-713px 0px; width:114px }
+      #mainNav ul li a#nav_news { background-position:-827px 0px; width:133px }
+       /* CGS */
+      #mainNav ul li a#nav_home { background-position:0px -100px; width:114px }
+      #mainNav ul li a#nav_aboutcgs { background-position:-114px -100px; width:120px }
+      #mainNav ul li a#nav_programs { background-position:-234px -100px ; width:128px }
+      #mainNav ul li a#nav_apply { background-position:-362px -100px; width:134px }
+      #mainNav ul li a#nav_gettingready { background-position:-496px -100px; width:149px }
+      #mainNav ul li a#nav_cominghome { background-position:-645px -100px; width:154px }
+      #mainNav ul li a#nav_contact { background-position:-799px -100px; width:161px }
+      
+      
+      #mainNav ul li a#nav_about:hover { background-position:0px -25px }
+      #mainNav ul li a#nav_admissions:hover { background-position:-120px -25px }
+      #mainNav ul li a#nav_academic:hover { background-position:-240px -25px }
+      #mainNav ul li a#nav_abroad:hover { background-position:-360px -25px }
+      #mainNav ul li a#nav_student:hover { background-position:-480px -25px }
+      #mainNav ul li a#nav_athletics:hover { background-position:-600px -25px }
+      #mainNav ul li a#nav_givingback:hover { background-position:-713px -25px }
+      #mainNav ul li a#nav_news:hover { background-position:-827px -25px }
+       /* CGS */
+      #mainNav ul li a#nav_home:hover { background-position:0px -125px }
+      #mainNav ul li a#nav_aboutcgs:hover { background-position:-114px -125px }
+      #mainNav ul li a#nav_programs:hover { background-position:-234px -125px }
+      #mainNav ul li a#nav_apply:hover { background-position:-362px -125px }
+      #mainNav ul li a#nav_gettingready:hover { background-position:-496px -125px }
+      #mainNav ul li a#nav_cominghome:hover { background-position:-645px -125px }
+      #mainNav ul li a#nav_contact:hover { background-position:-799px -125px }
+      
+      
+      #mainNav ul li a#nav_about:active { background-position:0px -50px }
+      #mainNav ul li a#nav_admissions:active { background-position:-120px -50px }
+      #mainNav ul li a#nav_academic:active { background-position:-240px -50px }
+      #mainNav ul li a#nav_abroad:active { background-position:-360px -50px }
+      #mainNav ul li a#nav_student:active { background-position:-480px -50px }
+      #mainNav ul li a#nav_athletics:active { background-position:-600px -50px }
+      #mainNav ul li a#nav_givingback:active { background-position:-713px -50px }
+      #mainNav ul li a#nav_news:active { background-position:-827px -50px }
+       /* CGS */
+      #mainNav ul li a#nav_home:active { background-position:0px -150px }
+      #mainNav ul li a#nav_aboutcgs:active { background-position:-114px -150px }
+      #mainNav ul li a#nav_programs:active { background-position:-234px -150px }
+      #mainNav ul li a#nav_apply:active { background-position:-362px -150px }
+      #mainNav ul li a#nav_gettingready:active { background-position:-496px -150px }
+      #mainNav ul li a#nav_cominghome:active { background-position:-645px -150px }
+      #mainNav ul li a#nav_contact:active { background-position:-799px -150px }
+      
+      #mainNav ul li a#nav_about.current { background-position:0px -75px;}
+      #mainNav ul li a#nav_admissions.current { background-position:-120px -75px }
+      #mainNav ul li a#nav_academic.current { background-position:-240px -75px }
+      #mainNav ul li a#nav_abroad.current { background-position:-360px -75px }
+      #mainNav ul li a#nav_student.current { background-position:-480px -75px }
+      #mainNav ul li a#nav_athletics.current { background-position:-600px -75px }
+      #mainNav ul li a#nav_givingback.current { background-position:-713px -75px }
+      #mainNav ul li a#nav_news.current { background-position:-827px -75px }
+       /* CGS */
+      #mainNav ul li a#nav_home.current { background-position:0px -175px }
+      #mainNav ul li a#nav_aboutcgs.current { background-position:-114px -175px }
+      #mainNav ul li a#nav_programs.current { background-position:-234px -175px }
+      #mainNav ul li a#nav_apply.current { background-position:-362px -175px }
+      #mainNav ul li a#nav_gettingready.current { background-position:-496px -175px }
+      #mainNav ul li a#nav_cominghome.current { background-position:-645px -175px }
+      #mainNav ul li a#nav_contact.current { background-position:-799px -175px }
+
+
+/* - - - - - PAGE - - - - - - -*/        
+#page {
+  background:transparent url(../img/page-bg.png) repeat-y center;
+  padding:10px 4px 0;
+  margin-top:-2px;
+}
+  /* - - - Page Layout - - - -*/
+  #subNav,#content,#actions {
+    float:left;
+  }
+    #subNav {
+      width:175px;
+      padding:5px 20px;
+      margin-top:10px;
+    }
+	  #actions {
+      width:165px;
+      padding:5px 20px;
+      margin-top:10px;
+    }
+	
+    #content {
+      width:480px;
+      margin:0 40px 0 15px;
+    }
+    	#abroad #home #content { margin-top:16px;}
+
+
+
+/* - - - - -#subNav - - - - - - -*/ 
+#subNav {
+   
+  }
+    #subNav ul { margin:0; padding:0; visibility:hidden; }
+      #subNav li { list-style:none; margin:0; }
+      #subNav ul ul { visibility:visible; margin:0; }
+      #subNav ul ul ul {
+		    display:none;
+        margin:0 0 0 0px;
+        font-size:.95em;
+      }
+      #subNav ul li a { display:none; margin:0;font-family:Verdana, sans-serif; }
+      #subNav ul li ul li a, #subNav ul li ul li a:visited {
+          display:block;
+          padding:5px 5px 5px 24px;
+          text-decoration:none;
+          color:#333;
+          background:#ffeeb5;
+          min-height:14px;
+          border-top:2px solid #fff;
+        }
+        #subNav ul li ul li ul li a, #subNav ul li ul li ul li a:visited {
+		      padding:4px 5px 4px 24px;
+          border:none;
+          line-height:1.2em;
+          background: #fffae9 url(../img/subNav_child_bullet.png) no-repeat 15px 6px;
+        }
+      #subNav ul li ul li a.current-parent {
+	      font-weight:700;
+	      color:#a4001e;
+	    }
+      #subNav ul li ul li a:hover,
+    	#subNav ul li ul li ul li a:hover,
+  	  #subNav ul li ul li a.current,
+  	  #subNav ul li ul li ul li a.current  {
+    	  color:#fff;
+    	  background:#a4001e;
+    	}
+		
+      #subNav ul li ul li a.toggle {
+        background:transparent url(../img/subNav_topLevel_toggle.png) no-repeat center 11px;
+        float:left;
+        margin:0 3px;
+        width:15px;
+        height:24px;
+        text-indent:-5000px;
+        padding:0 5px 0 0;
+        cursor:pointer;
+        border:none;
+      }
+        #subNav ul li ul li a.toggle:hover { background-position:center -14px; background-color:transparent; }
+        #subNav ul li ul li a.expanded { background-position:center -39px; }
+        #subNav ul li ul li a.expanded:hover { background-position:center -64px }
+        #subNav ul li ul li a.siblingHover { background-position:center -89px }
+        #subNav ul li ul li a.expanded.siblingHover { background-position:center -114px }
+    
+/* - - - - - CONTENT! - - - - - - -*/        
+#content {
+  
+}
+  /* - - - - - BREADCRUMBS! - - - - - - -*/        
+  #breadcrumbs {
+    margin:10px 0 10px 0;
+    height:13px;
+    font-size:.8em;
+    font-family: Verdana, Helvetica, sans-serif;
+  }
+    #breadcrumbs a { text-decoration:none }
+	  #breadcrumbs a:hover { color:#f00; text-decoration:underline }
+    #breadcrumbs a:visited { color:#900 }
+  
+  /* - - - - - Content Defaults! - - - - - - -*/  
+ 
+  /*#content img {border:4px solid #ddd; margin:7px;}*/
+  
+  hr { color:#eee }
+  
+  .ArialSubhead12pt { font-size:1.3em; font-family: Arial, Helvetica, sans-serif; font-weight: normal; color: #111;}
+  
+  .Box-YellowFullWidth,.Box-GrayFullWidth {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin:15px 0 10px;
+    display:block;
+  }
+  .Box-YellowFullWidth { background-color: #fffae9; }
+  .Box-GrayFullWidth { background-color: #efefef; }
+  .Column-FloatRight { float: right; margin-left: 20px; vertical-align: top; }
+  
+  #content .callout, .calloutBox {
+    padding:10px;
+    border:1px solid #ff9;
+    background:#ffe;
+    
+    margin:0 0 20px;
+  }
+  
+  .study_abroad_landing {
+    margin-left:-200px;
+    padding-top:20px;
+  }
+    h2.study_abroad_landing {
+      padding-left:200px;
+      border-top:1px solid #ccc;
+      
+    }
+    img.study_abroad_landing {
+      float:left;
+    }
+  
+  #content .column {
+		float:left;
+		padding:0 3px 0;
+	}
+	#content .column.two {
+		width:47%;
+	}
+	#content .column.three {
+		width:30%;
+	}
+    
+  #top { float:right }
+  
+  .Element-FloatLeft { float:left; margin: 0 20px 10px 0px;}
+
+  .Element-FloatRight { float:right; margin: 0 0 10px 20px;}
+  
+  .ArcadiaRedText {color: #a4001e;}
+
+  .BrightRedText {color: #FF0000;}
+  
+  .FootnoteText { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: .8em; line-height: normal;}
+
+  #joblist {  /*controls style of List Summary Block on aufaculty and austaff pages */
+	/*font-weight: bold;*/
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	padding-top: 5px;
+	padding-left: 25px;
+  }
+
+  #joblist td {  /*controls style of List Summary Block on aufaculty and austaff pages */
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	padding-bottom: 10px;
+  }
+  
+  /*---------------Athletics------------------------*/
+.Box-AthleticsRed {
+	background-color: #ae001e;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: .8em;
+	color: #fff;
+	line-height: normal;
+	padding: 8px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	display: block;
+}
+  
+  
+/* - - - - - Actions! - - - - - - -*/ 
+#actions {
+  border-left:1px solid #ccc;
+  padding-left:20px;
+}
+  #blog #actions,#ctl00_Blog1_bcCalendar { display:none;}
+  #blog #content { width:744px;margin:0; }
+  #blog .blogEntries { float:left;width:480px;}
+  #blog h1.blogTitle { font-size: 2em; line-height: 1; margin: 20px 0px 0px 0px; color:#A4001E}
+  #blog h3.entryTitle { font-size: 1.6em; line-height: 1.1; font-weight: 400; margin-bottom: 0; padding-top: 20px;}
+    #blog h3.entryTitle a {text-decoration:none;}
+	#blog h3.entryTitle a:hover {text-decoration:underline;}
+  #blog h4 { color:#333; font-family: Verdana, Arial, Helvetica, sans-serif; font-weight:bold; }
+  #blog .entrypermalink { display:none;}
+  #blog .entryFooter { font-size: .8em; color:#666;}
+  #blog .blogSidebar { 
+  	float:left; 
+	width:200px; 
+	margin-left:25px; 
+	border-left:1px solid #ccc;
+	padding-left:20px;
+	}
+  #blog .blogRSS { margin-bottom:10px;} 
+  
+  #actions h2 {
+    font-size:1.2em;
+	font-weight:700;
+    line-height:1em;
+  }
+  
+   #actions p {
+    font-size:90%;
+	font-weight:normal;
+    line-height:normal;
+  }
+  
+  #actions  a.button {
+    margin:0 0 15px 0;
+    display:block;
+  } 
+    #actions a#button_moreinfo {
+    
+    }
+    #actions a#button_contactus {
+    
+    }
+    #actions a#button_applynow {
+    
+    }
+  /*#actions img {
+    border:5px solid #ddd;
+  } */
+  
+  /*#actions a:hover img {
+      border:5px solid #bbb;
+    } */
+		#abroad #home #actions ul { margin:0 }
+    #abroad #home #actions ul li {list-style:none;margin:8px 0;font-size:.9em}
+		#abroad #home #actions a img { margin:8px 0;}
+/* - - - - - FOOTER - - - - - - -*/        
+#footer {
+  clear:both;
+  background:#e2e2e2 url(../img/footer-bg.png) no-repeat;
+  padding:150px 0 0 0;
+  text-align:center;
+  color:#666;
+  font-size:.75em;
+  height:75px;
+}
+  #footer hr { display:none }
+  #footer #footer_logo {
+    background:url(../img/arcadia-logo-footer.png) no-repeat ;
+    width:136px;
+    height:31px;
+    display:block;
+    text-indent:-9999px;
+    margin:6px 0 0 55px;
+    float:left;
+  }
+  	#abroad #footer_logo {background-position:0 -35px;height:45px}
+  #footer ul { float:left; margin:0 0 0px 15px; }
+    #footer ul:first-child { margin-left:35px; }
+    #footer ul li { list-style:none;float:left; padding:0 4px}
+      #footer ul li a { color:#666}
+
+
+/* - - - - - Search Styles - - - - - - */
+#cse-search-results {
+	width:900px;
+	margin:0 auto;
+}
+
+/* - - - - - CEA STYLES - - - - - - - */
+#abroad #content h1 { margin-top:15px; font-family:"Times New Roman", Serif}
+
+ul.nobullets { margin:0; }
+ul.nobullets li { list-style:none }
+
+.CEAPageNav {  /*use for adding horizontal nav links*/
+  height:20px;
+  margin:10px 0px 20px 0px;
+  text-align: left;
+}
+	
+  .CEAPageNav li {  /*use for adding horizontal nav links*/
+	  float:left; 
+	}
+  .CEAPageNav li a {  /*use for adding horizontal nav links*/
+	  display:block;
+	  padding:2px 8px;
+	  border-right:1px solid #a4001e;
+	}
+  .CEAPageNav li.last a {  /*use for adding horizontal nav links*/
+    border-right:none;
+  }
+  .CEAPageNav li a:hover {  /*use for adding horizontal nav links*/
+	  background-color:#ffffcc;
+	}
+
+
+/* - - - HOMEPAGE STYLES - - - - */
+#home #page {
+  padding-top:0;
+}
+  #feature {
+    width:859px;
+    height:267px;
+    margin:0 auto;
+    padding:3px 4px 5px;
+    background:url(../img/home_feature_bg.png) no-repeat 0 18px;
+    position:relative;
+  }
+    #feature-images {
+      float:left;
+    }
+      
+      #feature .button {
+        position:absolute;
+        top:220px;
+      }
+        #feature .button a {
+          display:block;
+          height:17px;
+          width:53px;
+          background: url(../img/feature_controls.png) no-repeat;
+          text-indent:-9999px;
+        }
+      #feature #prevButton {
+        left:50px;
+      }
+      #feature #nextButton {
+        left:103px;
+      }
+        #feature #nextButton a {
+          background-position:-53px 0;
+        }
+    
+    #pathfinding {
+      float:left;
+      background:url(../img/pathfinding_bg.png) repeat-x;
+      margin-top:15px;
+      width:244px;
+      height:252px;
+      overflow:hidden;
+    }
+      #pathfinding ul { margin:2px 0 0}
+        #pathfinding ul li {
+          list-style:none;
+        }
+          #pathfinding > ul > li {
+            padding:3px 18px;
+            margin:0;
+            border-top:1px solid #c60226;
+          }
+            #pathfinding > ul > li:hover { background:#700 }
+            #pathfinding > ul > li:first-child { border-top:none }
+          
+		  #pathfinding ul li h2 { 
+            color:#fff; 
+            margin:2px 0 3px;
+          }
+		  	#pathfinding ul li h2 a { color:#fff; text-decoration:none}
+		    #pathfinding ul li h2 a:hover { color:#fff; text-decoration:underline}
+		  
+          #pathfinding ul li ul {margin:0 1px 3px}
+            #pathfinding ul li ul li {display:inline; border-left:1px solid #c76;margin:0}
+            #pathfinding ul li ul li:first-child {border-left:none}
+              #pathfinding ul li ul li a { 
+                color:#ffc;
+                text-decoration:none;
+                padding:0 5px 0 8px;
+                font-size:.9em;
+              }
+                #pathfinding ul li ul li a:hover { color:#fff;text-decoration:underline}
+  
+  #highlights { float:left; width:240px;clear:left; margin:20px 10px 0 50px; }
+    #highlights ul { margin:0 }
+      #highlights ul li { list-style:none; clear:left}
+        #highlights ul li a.image,
+        #highlights ul li div {
+         float:left
+        }
+        #highlights ul li a img { border:3px solid #ccc; margin:0 10px 15px 0}
+          #highlights ul li a:hover img { border-color:#666}
+        #highlights ul li div { width:145px; }
+        #highlights ul li h2 {margin:4px; font-size:1.2em;font-weight:700}
+        #highlights ul li p { padding:0 5px;font-size:.8em; color:#333; }
+
+  #news { 
+    float:left; 
+    width:600px; 
+    margin:20px 20px 0 0;
+    padding-left:20px;
+    border-left:1px solid #ccc;
+  }
+    #bulletin {
+      float:right; 
+      width:205px;
+      background:#feb url(../img/home_bullbox_bg.png) repeat-x;
+      border:1px solid #ddd;
+      margin:0 10px 25px 30px;
+	  padding:0 20px 0px;
+    }
+      #bulletin h2 {
+        background:#fee999;
+        padding:4px 20px;
+        margin:0 -20px 8px;
+        font-weight:700;
+        font-size:1.2em
+      }
+      #bulletin h3 {font-size:1.1em;font-weight:700; margin:0 0 5px 0;}
+      #bulletin p {}
+    #news h2, #network h2 {color:#a4001e;}
+    #news ul { margin:15px 0;}
+    #news ul li { color:#222; list-style:none; margin:5px 0; font-size:.9em}
+    #news p {
+      font-size:.8em;
+      clear:both;
+    }
+    
+/*- - - - - Abroad Home - - - - - - - - */    
+#abroad #home #page {
+padding-top:0;
+}
+#abroad #feature {
+	background: url(http://s.arcadia.edu/img/abroad_background.jpg) no-repeat;
+	width:960px;
+	height:443px;
+	padding:0;
+	position:relative;
+}
+	#feature h1 {margin:0;}
+	#feature h1 a {
+		width:313px;
+		height:59px;
+		position:absolute;
+		top:35px;
+		right:50px;
+		background: url(http://s.arcadia.edu/img/abroad_feature_header.png) no-repeat;
+		text-indent:-9999px;
+	}
+	#abroad #quicknav {
+		float:left;
+		width:201px;
+		position:absolute;
+	}
+		#quicknav span {
+			color:#fc0;
+			font-style:italic;
+			font-weight:700;
+			padding:10px 18px 3px;
+			display:block;
+		}
+		#quicknav {z-index:100;}
+		#quicknav ul { margin:0;}
+		#quicknav li { list-style:none;margin:0}
+		#quicknav a {
+			display:block;
+			padding:7px 10px 6px 30px;
+			font-size:1.4em;
+			color:#fff;
+			border-top:1px solid #999;
+			border-bottom:1px solid #333;
+			text-decoration:none;
+			line-height:1em;
+		}
+		#quicknav a span {
+			font-size:1em;
+			color:#fff;
+			padding:0;
+			font-weight:400;
+			font-style:normal;
+		}
+			#quicknav a:hover { background:#a3001e; }
+			#quicknav a span {white-space:nowrap;}
+	#personas {
+		position:absolute;
+		bottom:175px;
+		right:50px;
+	}
+		#personas li {
+			font-size:1.2em;
+			color:#fc0;
+			
+		}
+			#personas li.title {margin-left:-16px;font-weight:700;font-style:italic;list-style:none}
+		
+				#personas a {
+					color:#fff;
+					text-decoration:none;
+					display:block;
+				}
+					#personas a:hover { text-decoration:underline;}
+
+	#abroad #news { margin-top:10px; width:350px}
+		#abroad #news a { color:#666; text-decoration:none; font-weight:700}
+			#abroad #news a:hover {text-decoration:underline;}
+	
+	#highlights.network {width:229px;margin:10px 10px 0 30px;clear:none}
+	
+	.continent {
+		display:none;
+		width:960px;
+		height:443px;
+		padding:0;
+		position:absolute;
+		top:0;
+		left:0;
+		z-index:10;
+	}
+		#Asia {
+			background: url(/img/abroad_background_asia.jpg) no-repeat;
+		}
+		#Africa {
+			background: url(/img/abroad_background_africa.jpg) no-repeat;
+		}
+		#Europe {
+			background: url(/img/abroad_background_europe.jpg) no-repeat;
+		}
+		#Oceania {
+			background: url(/img/abroad_background_oceania.jpg) no-repeat;
+		}
+		.continent h3 {display:none;}
+		.continent ul {
+			position:absolute;
+			bottom:30px;
+			left:530px;
+		}
+			.continent li {}
+			.continent a {
+				display:block;
+				font-size:1.4em;
+				color:#fff;
+				font-weight:700;
+				text-decoration:none;
+			}
